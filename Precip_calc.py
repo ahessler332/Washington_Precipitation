@@ -23,9 +23,13 @@ file_nametuple =("Hydrology_Fall_City.csv","Hydrology_Federal_Way.csv",
                 "Hydrology_South_Vashon.csv", "Hydrology_Mukilteo.csv",
                 "Hydrology_Bellevue.csv", "Hydrology_Burien.csv",
                 "Hydrology_Cougar_MT.csv", "Hydrology_Enumclaw.csv")
+                
 
 
 z = len(file_nametuple)
+avgyearpreciplist = []
+avgdaypreciplist = []
+avgmonthpreciplist = []
 
 for q in range(z):  
     
@@ -259,18 +263,12 @@ for q in range(z):
              for k in range(len(yearbreakdown(station)[y])):
                 precipitation = precipitation + yearbreakdown(station)[y][k].get("precip")
                 
-             #precipavgyear = precipitation / x #returns average rainfall per day 
+             
              avgyearprecip.append(precipitation)
-             print(precipitation)
+             
              precipitation = 0
-             #precipavgmonth = precipitation / ((len(yearbreakdown(station)[y]))/x)
+             
         
-        print(precipitation)
-        print(x)
-        #print(precipavgyear)
-        print(avgyearprecip)
-        
-        #print(precipavgmonth)
         return avgyearprecip
             
     def weather_calc_month():
@@ -316,15 +314,15 @@ for q in range(z):
 
     #print("completed weather calculations")
     avgdayprecip = weather_calc_month()[0]
-    avgdaypreciplist = []
+    
     avgdaypreciplist.append(avgdayprecip)
     print("finished first calc")
     avgmonthprecip = weather_calc_month()[1]
-    avgmonthpreciplist = []
+    
     avgmonthpreciplist.append(avgmonthprecip)
     print("finished second calc")
     avgyearprecip = weather_calc_year()
-    avgyearpreciplist = []
+    
     avgyearpreciplist.append(avgyearprecip)
     
 
@@ -348,6 +346,44 @@ for q in range(z):
     record = {}
     station = []
     print("finished "+file_nametuple[q])
-    
+
+minlist = []
+maxlist = []
+k = 0
+q = 100000
+for y in range(len(avgyearpreciplist)):
+    for t in range(len(avgyearpreciplist[y])):
+        if (avgyearpreciplist[y][t]) == 0:
+            pass
+        elif (avgyearpreciplist[y][t]) != 0:
+            k = (avgyearpreciplist[y][t])
+            if float(q) > float(k):
+                q = k
+                minlist.append(q)
+            else:
+                pass
+        else:
+            print("this didn't work")
+    k = max(avgyearpreciplist[y])
+    maxlist.append(k)    
+        
+
+
+#print(avgyearpreciplist)
+lowestrainfall = min(minlist)
+y = minlist.index(min(minlist))
+print("The lowest rainfall recorded was " + str(lowestrainfall)+" inches.")
+print("This site had the lowest rainfall: "+ file_nametuple[y])
+b = min(minlist)
+print(y)
+print(b)
+r = avgyearpreciplist[y+1].index(float(b))
+print("This occurred in the year: " + yearnameslist[r])
+maxrainfall = max(maxlist)
+l = maxlist.index(max(maxlist))
+z = avgyearpreciplist[l].index(float(maxrainfall))
+print("The highest rainfall recorded was " + str(maxrainfall)+" inches.")
+print("This site had the highest rainfall: " + file_nametuple[l])
+print("This occurred in the year: " + yearnameslist[z])
 
 print("finished program")
