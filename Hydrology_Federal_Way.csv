@@ -1,4 +1,4 @@
-Site_Code,Collect Date (local),Precipitation (inches),E = Estimate; W = Warning; P = Provisional; S = Snow Or Ice
+Federal_Way_site, Date, Precipitation, Condition
 41v,10/1/1988,0.000,
 41v,10/2/1988,0.000,
 41v,10/3/1988,0.000,
