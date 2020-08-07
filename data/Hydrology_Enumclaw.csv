@@ -1,4 +1,4 @@
-Site_Code,Collect Date (local),Precipitation (inches),E = Estimate; W = Warning; P = Provisional; S = Snow Or Ice
+site, Date, Precipitation, Condition
 44u,2/12/1998,0.050,
 44u,2/13/1998,0.370,
 44u,2/14/1998,0.040,

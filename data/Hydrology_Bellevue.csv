@@ -1,4 +1,4 @@
-Site_Code,Collect Date (local),Precipitation (inches),E = Estimate; W = Warning; P = Provisional; S = Snow Or Ice
+site, Date, Precipitation, Condition
 XRDS,10/1/2000,0.020,
 XRDS,10/2/2000,0.000,
 XRDS,10/3/2000,0.000,
