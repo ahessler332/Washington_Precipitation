@@ -10,6 +10,7 @@ app/__pycache__/
 *$py.class
 venv/
 
+
 # C extensions
 *.so
 

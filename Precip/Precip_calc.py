@@ -23,7 +23,7 @@ file_nametuple =("Hydrology_Fall_City.csv","Hydrology_Federal_Way.csv",
                 "Hydrology_South_Vashon.csv", "Hydrology_Mukilteo.csv",
                 "Hydrology_Bellevue.csv", "Hydrology_Burien.csv",
                 "Hydrology_Cougar_MT.csv", "Hydrology_Enumclaw.csv")
-        
+                
 
 
 z = len(file_nametuple)
@@ -263,7 +263,6 @@ for q in range(z):
              for k in range(len(yearbreakdown(station)[y])):
                 precipitation = precipitation + yearbreakdown(station)[y][k].get("precip")
                 
-
              
              avgyearprecip.append(precipitation)
              
@@ -315,7 +314,6 @@ for q in range(z):
 
     #print("completed weather calculations")
     avgdayprecip = weather_calc_month()[0]
-
     
     avgdaypreciplist.append(avgdayprecip)
     print("finished first calc")
