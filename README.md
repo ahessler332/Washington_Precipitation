@@ -10,3 +10,6 @@ Features:
 •	Sql_search.py searches the SQLite database and pulls requested data out for user to look at. 
 
 •	Precip_graph.py uses given data from database to create basic bar chart in Matplotlib.
+
+Example of plot:
+
