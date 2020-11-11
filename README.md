@@ -11,5 +11,5 @@ Features:
 
 •	Precip_graph.py uses given data from database to create basic bar chart in Matplotlib.
 
-Example of plot:
+Example of plot: https://imgur.com/gallery/ir0ZxZU
 
