@@ -3,13 +3,13 @@ Creation and basic analysis of an SQLite database containing ten King County pre
 
 Features:
 
-•	Uses a basic web scraper to pull data found in Precip_download.py. 
+•	Utilizes a basic web scraper to pull data found online on King County weather stations website . 
 
-•	Database.py is a script to take that file and plug into a new or old SQLite database. 
+• Script that takes a file and plugs into a new or old SQLite database. 
 
-•	Sql_search.py searches the SQLite database and pulls requested data out for user to look at. 
+•	A quick program that searches a SQLite database and pulls requested data out for user to look at. 
 
-•	Precip_graph.py uses given data from database to create basic bar chart in Matplotlib.
+•	Ability to create a basic bar chart in Matplotlib from selected database by user input.
 
 Example of plot: https://imgur.com/gallery/ir0ZxZU
 
